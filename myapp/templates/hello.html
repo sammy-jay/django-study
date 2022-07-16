@@ -1,0 +1,17 @@
+{% extends 'main.html' %} {% block title %}{{title}}{% endblock title %}
+{% block content %}
+{% comment %} <p>Today is {{today|upper}}</p> {% endcomment %}
+{% if today == 1 %}
+<h1>Today is Monday</h1>
+{% elif today == 2 %}
+<h1>Today is Tuesday</h1>
+{% else %}
+<h1>Today is just another day</h1>
+{% endif %}
+
+<ul>
+  {% for day in weekDays %}
+  <li>{{day}}</li>
+  {% endfor %}
+</ul>
+{% endblock content %}
