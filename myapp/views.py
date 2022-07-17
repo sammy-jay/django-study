@@ -11,7 +11,7 @@ from myapp.models import Dreamreal
 # Using the render function
 def index(request):
     weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-    return render(request, "hello.html", {"today": 1, "weekDays": weekDays, "n": 1, "title": "My Page"})
+    return render(request, "myapp/hello.html", {"today": 1, "weekDays": weekDays, "n": 1, "title": "My Page"})
 
 def about(request):
     return HttpResponse("<h1>About Page</h1>")
