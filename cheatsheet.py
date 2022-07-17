@@ -37,6 +37,7 @@ class Article(models.Model):
     # Querying info
         Reporter.objects.get(id=1)
         Reporter.objects.get(full_name__startswith="John")
+        Reporter.objects.filter(full_name__startswith="John")
         Reporter.objects.get(full_name__contains="mith")
     
 
