@@ -1,6 +1,8 @@
 #   models.py
 
+from msilib.schema import MsiDigitalCertificate
 from django.db import models
+from django.http import HttpResponse
 
 class Reporter(models.Model):
     full_name = models.CharField(max_length=70)
@@ -107,3 +109,42 @@ class Article(models.Model):
         <p>{{ article.pub_date|date:"F j, Y" }}</p>
     {% endfor %}
     {% endblock content %}
+
+
+form django.db import models
+
+class Reporter(models.Model):
+    full_name = models.CharField(max_length=70)
+
+    def __str__(self):
+        return self.full_name
+
+class Article(models.Model):
+    title = models.CharField(max_length=70)
+    content = models.TextField()
+    reporter = models.ForeignKey(Reporter, on_delete=models.CASCADE)
+
+python manage.py makemigrations
+python manage.py MsiDigitalCertificate
+
+path('', include('myapp.urls'))
+
+from . import views
+app_name = 'polls'
+urlpatterns = [
+    path('', views.index, name="index")
+
+]
+{% url 'polls:index' %}
+
+def index(request):
+    return HttpResponse("Hello world")
+
+def detail(request, id):
+    details = Reports.objects.get(id=id)
+    return render(request, 'polls/detail.html', {'details':details})
+
+{% extends './base.html' %}
+{% block content %}
+
+{% endblock content %}
