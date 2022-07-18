@@ -1,3 +1,7 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
 {% if latest_question_list %}
 <ul>
   {% for question in latest_question_list %} {% comment %}
@@ -5,7 +9,9 @@
   {% endcomment %}
 
   <li>
-    <a href="{% url 'polls:detail' question.id %}">{{question.question_text}}</a>
+    <a href="{% url 'polls:detail' question.id %}"
+      >{{question.question_text}}</a
+    >
   </li>
   {% endfor %}
 </ul>
