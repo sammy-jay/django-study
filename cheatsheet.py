@@ -1,6 +1,5 @@
 #   models.py
 
-from msilib.schema import MsiDigitalCertificate
 from django.db import models
 from django.http import HttpResponse
 
@@ -148,3 +147,10 @@ def detail(request, id):
 {% block content %}
 
 {% endblock content %}
+
+from django.db import models
+
+class Article(models.Model):
+    
+    title = models.CharField(max_length=70)
+    description = models.TextField()

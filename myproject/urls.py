@@ -21,5 +21,6 @@ from myapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('myapp.urls')),
+    path('deepdive/', include('deepdive.urls')),
     path('polls/', include('polls.urls'))
 ]

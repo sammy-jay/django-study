@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp',
-    'polls.apps.PollsConfig'
+    'polls.apps.PollsConfig',
+    'deepdive.apps.DeepdiveConfig'
 ]
 
 MIDDLEWARE = [
