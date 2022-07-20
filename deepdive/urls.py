@@ -2,7 +2,7 @@ from django.urls import path, re_path, register_converter
 from . import views, converters
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.get_name, name='index'),
 ]
 
 # Registering Custom Path Converters
